@@ -1,4 +1,17 @@
 ## update
+### update operators
+Name|Description
+----|-----------
+$currentDate|Sets the value of a field to current date, either as a Date or a Timestamp.
+$inc|Increments the value of the field by the specified amount.
+$min|Only updates the field if the specified value is less than the existing field value.
+$max|Only updates the field if the specified value is greater than the existing field value.
+$mul|Multiplies the value of the field by the specified amount.
+$rename|Renames a field.
+$set|Sets the value of a field in a document.
+$setOnInsert|Sets the value of a field if an update results in an insert of a document. Has no effect on update operations that modify existing documents.
+$unset|Removes the specified field from a document.
+
 ### syntax
 ```js
 db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA)
@@ -52,6 +65,13 @@ db.COLLECTION_NAME.updateOne(<filter>, <update>)
 db.empDetails.updateOne(
 	{First_Name: 'Radhika'},
 	{ $set: { Age: '30',e_mail: 'radhika_newemail@gmail.com'}}
+)
+```
+### example
+```js
+db.empDetails.updateOne(
+	{First_Name: 'Radhika'},
+	{$inc: { Age: 2}}
 )
 ```
 ## updateMany

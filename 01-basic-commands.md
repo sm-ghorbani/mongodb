@@ -12,7 +12,7 @@ show dbs
 ```
 ## use database:
 ```
-user [db name]
+use [db name]
 ```
 ## show all collections:
 ```

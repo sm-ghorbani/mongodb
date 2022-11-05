@@ -11,3 +11,4 @@ db.mycol.remove({'title':'MongoDB Overview'})
 ```js
 db.COLLECTION_NAME.remove(DELETION_CRITERIA,1)
 ```
+
